@@ -1,0 +1,5 @@
+const jwt = require("jsonwebtoken")
+exports.generateToken = (user) => {
+    return jwt.sign({ id: user._id}, process.env.jwt_SECRET);
+    expiresIn: "1h"
+}
